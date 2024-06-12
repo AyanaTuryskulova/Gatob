@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .navbar {
+            background-color: #343a40;
+            margin-bottom: 40px; /* Увеличен нижний отступ навигационной панели */
+        }
+        .navbar-brand {
+            color: #fff;
+            font-size: 28px; /* Увеличен размер шрифта */
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #e9ecef;
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+        }
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: #343a40;
+        }
+        .photo-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="m-5">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Мастер-классы</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'masterclass' %}">Мастер-класс</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="image1.jpg" class="d-block w-100" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="image2.jpg" class="d-block w-100" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="image3.jpg" class="d-block w-100" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="image4.jpg" class="d-block w-100" alt="Image 4">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="photo-thumbnail">
+                    <img src="thumbnail1.jpg" alt="Thumbnail 1">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-thumbnail">
+                    <img src="thumbnail2.jpg" alt="Thumbnail 2">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-thumbnail">
+                    <img src="thumbnail3.jpg" alt="Thumbnail 3">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="photo-thumbnail">
+                    <img src="thumbnail4.jpg" alt="Thumbnail 4">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-thumbnail">
+                    <img src="thumbnail5.jpg" alt="Thumbnail 5">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-thumbnail">
+                    <img src="thumbnail6.jpg" alt="Thumbnail 6">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-Dr9iF1WC+osweG81N6jKM25SLIOP+F1jV8xPZj2w2FM8i+jtlM45G3PWQifswjbi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-fkWq2jwkuFJCOvbFqf+uKw2sxpWSw8/sE3+A8qzTXWO6c+aD99lHvWBpbdTj+M4y" crossorigin="anonymous"></script>
+</body>
+</html>
